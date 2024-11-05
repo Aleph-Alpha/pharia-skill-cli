@@ -23,7 +23,7 @@ fn invalid_args() {
 }
 
 fn wasm_file() -> &'static Path {
-    let path = Path::new("./tests/test-skill.wasm");
+    let path = Path::new("./skills/test-skill.wasm");
     if !path.exists() {
         let mut file = File::create(path).unwrap();
         let content = wat::parse_str("(module)").unwrap();
@@ -72,7 +72,7 @@ async fn run_skill() {
     let cmd = cmd
         .arg("run")
         .arg("-n")
-        .arg("local/greet_skill")
+        .arg("dev/greet-skill")
         .arg("-i")
         .arg("Homer")
         .arg("-l")
@@ -115,14 +115,7 @@ impl TestKernel {
             tcp_addr: format!("127.0.0.1:{port}").parse().unwrap(),
             inference_addr: "https://api.aleph-alpha.com".to_owned(),
             document_index_addr: "https://document-index.aleph-alpha.com".to_owned(),
-            operator_config: OperatorConfig::from_toml(
-                r#"
-                    [namespaces.local]
-                    config_url = "file://../namespace.toml"
-                    registry = { type = "file", path = "../skills" }
-                "#,
-            )
-            .unwrap(),
+            operator_config: OperatorConfig::dev(),
             namespace_update_interval: Duration::from_secs(10),
             log_level: "info".to_owned(),
             open_telemetry_endpoint: None,
