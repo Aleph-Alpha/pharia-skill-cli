@@ -16,3 +16,5 @@ create-release = false
 # Plan jobs to run in CI
 plan-jobs = ["./cargo-login"]
 github-custom-job-permissions = { "cargo-login" = { id-token = "write", contents = "read" } }
+# Skip checking whether the specified configuration files are up to date
+allow-dirty = ["ci"]
