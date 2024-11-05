@@ -20,9 +20,9 @@ concurrency:
 env:
   CARGO_TERM_COLOR: always
   SKILL_REGISTRY: ghcr.io
-  SKILL_REPOSITORY: aleph-alpha/pharia-skill-cli
+  SKILL_REPOSITORY: aleph-alpha/pharia-skill-cli/skills
   SKILL_REGISTRY_USER: ${{ github.actor }}
-  SKILL_REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+  SKILL_REGISTRY_PASSWORD: ${{ secrets.PHARIA_SKILL_CLI_TEST_TOKEN }}
   AA_API_TOKEN: ${{ secrets.AA_API_TOKEN }}
   ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
 
