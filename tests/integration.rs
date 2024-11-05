@@ -7,7 +7,7 @@ use tokio::sync::oneshot;
 
 #[test]
 fn invalid_args() {
-    let mut cmd = Command::cargo_bin("pharia-skill").unwrap();
+    let mut cmd = Command::cargo_bin("pharia-skill-cli").unwrap();
     let cmd = cmd
         .arg("publish")
         .arg("-R")
@@ -36,7 +36,7 @@ fn wasm_file() -> &'static Path {
 fn publish_minimal_args() {
     drop(dotenvy::dotenv());
     let path = wasm_file();
-    let mut cmd = Command::cargo_bin("pharia-skill").unwrap();
+    let mut cmd = Command::cargo_bin("pharia-skill-cli").unwrap();
     let cmd = cmd
         .arg("publish")
         .arg(path)
@@ -68,7 +68,7 @@ async fn run_skill() {
 
     // when running a skill
     drop(dotenvy::dotenv());
-    let mut cmd = Command::cargo_bin("pharia-skill").unwrap();
+    let mut cmd = Command::cargo_bin("pharia-skill-cli").unwrap();
     let cmd = cmd
         .arg("run")
         .arg("-n")

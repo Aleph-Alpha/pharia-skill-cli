@@ -1,4 +1,4 @@
-# Pharia Skill
+# Pharia Skill CLI
 
 A simple CLI that helps you publish and run skills on Pharia Kernel.
 
