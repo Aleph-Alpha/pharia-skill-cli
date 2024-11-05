@@ -16,12 +16,9 @@ tokio = { version = "1.41.0", features = [
     "signal",
 ] }
 
-[lints]
-workspace = true
-
 [dev-dependencies]
 assert_cmd = "2.0.16"
 dotenvy = "0.15.7"
 predicates = "3.1.2"
 wat = "1.219.1"
-pharia-kernel = { path = ".." }
+pharia-kernel = { registry = "jfrog", version = "0.1.0" }
