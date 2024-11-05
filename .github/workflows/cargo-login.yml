@@ -1,0 +1,17 @@
+name: Cargo login
+
+on:
+  workflow_call:
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    env:
+      ARTIFACTORY_URL: https://alephalpha.jfrog.io
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Get JFrog Artifactory login credentials
+        uses: ./.github/actions/jfrog
+      - name: Cargo login
+        run: cargo login --registry=jfrog "Bearer $JFROG_ACCESS_TOKEN"
