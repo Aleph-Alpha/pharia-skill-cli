@@ -48,6 +48,9 @@ jobs:
   # Run 'dist plan' (or host) to determine what tasks we need to do
   plan:
     runs-on: "ubuntu-20.04"
+    permissions:
+      id-token: "write"
+      contents: "write"
     outputs:
       val: ${{ steps.plan.outputs.manifest }}
       tag: ${{ !github.event.pull_request && github.ref_name || '' }}
@@ -55,6 +58,7 @@ jobs:
       publishing: ${{ !github.event.pull_request }}
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -69,6 +73,10 @@ jobs:
         with:
           name: cargo-dist-cache
           path: ~/.cargo/bin/dist
+      - name: Get JFrog Artifactory login credentials
+        uses: ./.github/actions/jfrog
+      - name: Set JFrog token as env variable for cargo
+        run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $GITHUB_ENV
       # sure would be cool if github gave us proper conditionals...
       # so here's a doubly-nested ternary-via-truthiness to try to provide the best possible
       # functionality based on whether this is a pull_request, and whether it's from a fork.
