@@ -2,6 +2,7 @@
 name = "pharia-skill-cli"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/Aleph-Alpha/pharia-skill-cli"
 
 [dependencies]
 clap = { version = "4.5.20", features = ["env", "derive"] }
@@ -22,3 +23,8 @@ dotenvy = "0.15.7"
 predicates = "3.1.2"
 wat = "1.219.1"
 pharia-kernel = { registry = "jfrog", version = "0.1.0" }
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
