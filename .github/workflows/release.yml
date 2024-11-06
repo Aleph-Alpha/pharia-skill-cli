@@ -270,8 +270,7 @@ jobs:
 
       - name: Upload artifacts to JFrog
         run: |
-          find $VERSION
-          jfrog rt upload "$VERSION" "pharia-kernel-files/pharia-skill-cli/$VERSION/"
+          jfrog rt upload "$VERSION/*" "pharia-kernel-files/pharia-skill-cli/$VERSION/"
 
   # Determines if we should publish/announce
   host:
