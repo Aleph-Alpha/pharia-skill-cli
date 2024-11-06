@@ -255,7 +255,6 @@ jobs:
 
       - name: Unpack artifacts
         run: |
-          find target/distrib
           tar xvf target/distrib/pharia-skill-cli-aarch64-apple-darwin.tar.gz
           tar xvf target/distrib/pharia-skill-cli-x86_64-apple-darwin.tar.gz
           tar xvf target/distrib/pharia-skill-cli-x86_64-unknown-linux-gnu.tar.gz
@@ -271,7 +270,8 @@ jobs:
 
       - name: Upload artifacts to JFrog
         run: |
-          jfrog rt upload $VERSION "pharia-kernel-files/pharia-skill-cli/$VERSION"
+          find $VERSION
+          jfrog rt upload "$VERSION" "pharia-kernel-files/pharia-skill-cli/$VERSION/"
 
   # Determines if we should publish/announce
   host:
