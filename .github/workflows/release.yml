@@ -144,12 +144,9 @@ jobs:
           ${{ matrix.packages_install }}
       - name: Get JFrog Artifactory login credentials
         uses: ./.github/actions/jfrog
-      - if: ${{ !contains(fromJson(matrix.targets), 'windows') }}
-        name: Set JFrog token as env variable for cargo
+      - name: Set JFrog token as env variable for cargo
         run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $GITHUB_ENV
-      - if: contains(fromJson(matrix.targets), 'windows')
-        name: Set JFrog token as env variable for cargo
-        run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $env:GITHUB_ENV
+        shell: bash
       - name: Build artifacts
         run: |
           # Actually do builds and make zips and whatnot
