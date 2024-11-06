@@ -225,6 +225,34 @@ jobs:
           path: |
             ${{ steps.cargo-dist.outputs.paths }}
             ${{ env.BUILD_MANIFEST_NAME }}
+
+  upload-to-jfrog:
+    needs:
+      - build-global-artifacts
+    runs-on: "ubuntu-20.04"
+    permissions:
+      id-token: "write"
+      contents: "write"
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Fetch artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: artifacts-*
+          path: target/distrib/
+          merge-multiple: true
+      - uses: jfrog/setup-jfrog-cli@v4
+        env:
+          JF_URL: ${{ env.ARTIFACTORY_URL }}
+          JF_ACCESS_TOKEN: ${{ secrets.JFROG_ACCESS_TOKEN }}
+      - name: Extract version from tag
+        run: |
+          VERSION=$(echo ${{ needs.plan.outputs.tag }} | sed 's/^v//')
+      - name: Upload artifacts to JFrog
+        run: |
+          jfrog rt upload target/distrib "pharia-kernel-files/pharia-skill-cli/$VERSION"
+
   # Determines if we should publish/announce
   host:
     needs:
