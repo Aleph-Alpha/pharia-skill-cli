@@ -244,6 +244,9 @@ jobs:
           path: target/distrib/
           merge-multiple: true
 
+      - name: Get JFrog Artifactory login credentials
+        uses: ./.github/actions/jfrog
+
       - uses: jfrog/setup-jfrog-cli@v4
         env:
           JF_URL: ${{ env.ARTIFACTORY_URL }}
