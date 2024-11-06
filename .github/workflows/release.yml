@@ -253,8 +253,8 @@ jobs:
       - uses: jfrog/setup-jfrog-cli@v4
         env:
           JF_URL: ${{ env.ARTIFACTORY_URL }}
-          JF_USER: ${{ secrets.JFROG_ACCESS_TOKEN_SUBJECT }}
-          JF_PASSWORD: ${{ secrets.JFROG_ACCESS_TOKEN }}
+          JF_USER: ${{ env.JFROG_ACCESS_TOKEN_SUBJECT }}
+          JF_PASSWORD: ${{ env.JFROG_ACCESS_TOKEN }}
 
       - name: Extract version from tag
         run: |
