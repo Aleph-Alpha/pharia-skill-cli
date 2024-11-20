@@ -8,7 +8,7 @@ registries:
   cargo-jfrog:
     type: cargo-registry
     registry: "jfrog"
-    url: sparse+https://alephalpha.jfrog.io/artifactory/api/cargo/pharia-kernel-crates/index/
+    url: https://alephalpha.jfrog.io/artifactory/
     token: "${{secrets.CARGO_REGISTRIES_JFROG_TOKEN}}"
 updates:
   - package-ecosystem: "cargo"
