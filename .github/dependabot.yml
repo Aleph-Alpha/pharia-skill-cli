@@ -13,6 +13,8 @@ registries:
 updates:
   - package-ecosystem: "cargo"
     directory: "/"
+    registries:
+      - cargo-jfrog
     schedule:
       interval: "daily"
     allow:
