@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.17](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.1.16...v0.1.17)
+
+### Builds
+
+- *(deps)* Bump thiserror from 1.0.68 to 1.0.69 - ([b4df9ea](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/b4df9ea19188203241876b1dde2061d06b0853b2))
+- *(deps)* Bump the minor group with 82 updates - ([9f6ad63](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/9f6ad636a710fb7c2046c7faeb60f28f502cbee4))
+
+
 ## [0.1.0]
 
 ### Features
