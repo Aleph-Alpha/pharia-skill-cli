@@ -111,10 +111,13 @@ impl TestKernel {
 
     async fn with_defaults() -> Self {
         let port = free_test_port();
+        let metrics_port = free_test_port();
         let app_config = AppConfig {
             tcp_addr: format!("127.0.0.1:{port}").parse().unwrap(),
+            metrics_addr: format!("127.0.0.1:{metrics_port}").parse().unwrap(),
             inference_addr: "https://api.aleph-alpha.com".to_owned(),
             document_index_addr: "https://document-index.aleph-alpha.com".to_owned(),
+            authorization_addr: "https://api.aleph-alpha.com".to_owned(),
             operator_config: OperatorConfig::dev(),
             namespace_update_interval: Duration::from_secs(10),
             log_level: "info".to_owned(),
