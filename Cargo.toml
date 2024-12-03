@@ -21,7 +21,7 @@ tokio = { version = "1.41.1", features = [
 assert_cmd = "2.0.16"
 dotenvy = "0.15.7"
 predicates = "3.1.2"
-wat = "1.220.0"
+wat = "1.221.2"
 pharia-kernel = { registry = "jfrog", version = "0.4.0" }
 
 # The profile that 'dist' will build with
