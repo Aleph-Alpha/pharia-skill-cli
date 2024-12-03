@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.1.17...v0.2.0)
+
+### Features
+
+- [**breaking**] Refer credentials for skill registry as token - ([52eccf8](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/52eccf86c4b8b62ae63dd9a10840da42c480d801))
+
+### Builds
+
+- *(deps)* Bump the minor group across 1 directory with 19 updates - ([ccdf329](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/ccdf3294485ed30a9ce32fda3cbd2fdf5e1339a1))
+
+
 ## [0.1.17](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.1.16...v0.1.17)
 
 ### Builds
