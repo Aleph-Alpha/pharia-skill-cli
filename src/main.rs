@@ -35,9 +35,9 @@ enum Command {
         /// User name for OCI registry
         #[arg(long, short = 'u', env = "SKILL_REGISTRY_USER")]
         username: String,
-        /// Password for OCI registry
-        #[arg(long, short = 'p', env = "SKILL_REGISTRY_PASSWORD")]
-        password: String,
+        /// Token for OCI registry
+        #[arg(long, short = 'p', env = "SKILL_REGISTRY_TOKEN")]
+        token: String,
     },
     /// Run a skill via Pharia Kernel
     Run {
@@ -72,8 +72,8 @@ async fn main() {
             name,
             tag,
             username,
-            password,
-        } => publish(skill, registry, repository, name, tag, username, password).await,
+            token,
+        } => publish(skill, registry, repository, name, tag, username, token).await,
         Command::Run {
             name,
             input,
@@ -90,7 +90,7 @@ async fn publish(
     skill_name: Option<String>,
     tag: String,
     username: String,
-    password: String,
+    token: String,
 ) {
     let skill_name = skill_name.unwrap_or_else(|| {
         skill_path
@@ -107,7 +107,7 @@ async fn publish(
         .await
         .expect("Skill must be a valid Wasm component.");
 
-    let auth = RegistryAuth::Basic(username, password);
+    let auth = RegistryAuth::Basic(username, token);
     let client = Client::new(ClientConfig::default());
     let client = WasmClient::new(client);
 

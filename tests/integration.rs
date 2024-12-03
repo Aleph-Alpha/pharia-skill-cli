@@ -17,7 +17,7 @@ fn invalid_args() {
         .arg("-u")
         .arg("dummy_user")
         .arg("-p")
-        .arg("dummy_pass")
+        .arg("dummy_token")
         .arg("dummy.wasm");
     cmd.assert().failure();
 }
@@ -55,8 +55,8 @@ fn publish_minimal_args() {
             env::var("SKILL_REGISTRY_USER").expect("SKILL_REGISTRY_USER must be set."),
         )
         .env(
-            "SKILL_REGISTRY_PASSWORD",
-            env::var("SKILL_REGISTRY_PASSWORD").expect("SKILL_REGISTRY_PASSWORD must be set."),
+            "SKILL_REGISTRY_TOKEN",
+            env::var("SKILL_REGISTRY_TOKEN").expect("SKILL_REGISTRY_TOKEN must be set."),
         );
     cmd.assert().success();
 }
