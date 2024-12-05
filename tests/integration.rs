@@ -78,8 +78,8 @@ async fn run_skill() {
         .arg("-l")
         .arg(format!("http://127.0.0.1:{}", kernel.port()))
         .env(
-            "AA_API_TOKEN",
-            env::var("AA_API_TOKEN").expect("AA_API_TOKEN must be set."),
+            "PHARIA_AI_TOKEN",
+            env::var("PHARIA_AI_TOKEN").expect("PHARIA_AI_TOKEN must be set."),
         );
 
     // then the output must contain the expected value
