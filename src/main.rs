@@ -48,7 +48,7 @@ enum Command {
         #[arg(long, short = 'i')]
         input: String,
         /// The API token
-        #[arg(long, short = 'a', env = "AA_API_TOKEN")]
+        #[arg(long, short = 'a', env = "PHARIA_AI_TOKEN")]
         token: String,
         /// The Pharia Kernel instance
         #[arg(
