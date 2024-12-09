@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.2.0...v0.3.0)
+
+### Features
+
+- [**breaking**] Rename env variable to PHARIA_AI_TOKEN - ([769075a](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/769075a3fc1948adfac39a160713e853fe6f0d46))
+
+### Builds
+
+- *(deps)* Bump the minor group with 8 updates - ([e8e963b](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/e8e963b9ce79efbfd85b8dba4acd5a2c3ca787b9))
+- *(deps)* Bump the minor group with 7 updates - ([70e0403](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/70e04037c78d0dc600be97d97775f623ff48f751))
+- *(deps)* Bump the minor group with 17 updates - ([955721c](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/955721cdd3293c25096979122363a06ef9138508))
+- *(deps)* Bump tokio from 1.41.1 to 1.42.0 in the minor group - ([8512a59](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/8512a599bdc108f687981fc7a9404f031d61843f))
+
+
 ## [0.2.0](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.1.17...v0.2.0)
 
 ### Features
