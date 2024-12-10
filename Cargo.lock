@@ -54,7 +54,7 @@ dependencies = [
  "reqwest",
  "serde",
  "serde_json",
- "thiserror 2.0.4",
+ "thiserror 2.0.6",
  "tokenizers",
 ]
 
@@ -2609,7 +2609,7 @@ dependencies = [
  "serde_json",
  "strum 0.26.3",
  "strum_macros 0.26.4",
- "thiserror 2.0.4",
+ "thiserror 2.0.6",
 ]
 
 [[package]]
@@ -2804,9 +2804,9 @@ checksum = "e3148f5046208a5d56bcfc03053e3ca6334e51da8dfb19b6cdc8b306fae3283e"
 
 [[package]]
 name = "pharia-kernel"
-version = "0.4.3"
+version = "0.4.5"
 source = "sparse+https://alephalpha.jfrog.io/artifactory/api/cargo/pharia-kernel-crates/index/"
-checksum = "0df35f9b14791b350903842d205e29578810560d69d36d9dd4823ba0274ba005"
+checksum = "b8c6a008d768a9af38995f0b98163862c72bce3d246a5b76a10d0a27d4aee32e"
 dependencies = [
  "aleph-alpha-client",
  "anyhow",
@@ -2832,7 +2832,7 @@ dependencies = [
  "serde_json",
  "strum 0.26.3",
  "text-splitter",
- "thiserror 2.0.4",
+ "thiserror 2.0.6",
  "tokenizers",
  "tokio",
  "toml",
@@ -3042,7 +3042,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "157c5a9d7ea5c2ed2d9fb8f495b64759f7816c7eaea54ba3978f0d63000162e3"
 dependencies = [
  "anyhow",
- "itertools 0.11.0",
+ "itertools 0.13.0",
  "proc-macro2",
  "quote",
  "syn",
@@ -3896,7 +3896,7 @@ dependencies = [
  "once_cell",
  "regex",
  "strum 0.26.3",
- "thiserror 2.0.4",
+ "thiserror 2.0.6",
  "tokenizers",
  "unicode-segmentation",
 ]
@@ -3912,11 +3912,11 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "2.0.4"
+version = "2.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2f49a1853cf82743e3b7950f77e0f4d622ca36cf4317cba00c767838bac8d490"
+checksum = "8fec2a1820ebd077e2b90c4df007bebf344cd394098a13c563957d0afc83ea47"
 dependencies = [
- "thiserror-impl 2.0.4",
+ "thiserror-impl 2.0.6",
 ]
 
 [[package]]
@@ -3932,9 +3932,9 @@ dependencies = [
 
 [[package]]
 name = "thiserror-impl"
-version = "2.0.4"
+version = "2.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8381894bb3efe0c4acac3ded651301ceee58a15d47c2e34885ed1908ad667061"
+checksum = "d65750cab40f4ff1929fb1ba509e9914eb756131cef4210da8d5d700d26f6312"
 dependencies = [
  "proc-macro2",
  "quote",
