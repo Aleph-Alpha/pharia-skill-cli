@@ -1637,9 +1637,9 @@ checksum = "9a3a5bfb195931eeb336b2a7b4d761daec841b97f947d34394601737a7bba5e4"
 
 [[package]]
 name = "hyper"
-version = "1.5.1"
+version = "1.5.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "97818827ef4f364230e16705d4706e2897df2bb60617d6ca15d598025a3c481f"
+checksum = "256fb8d4bd6413123cc9d91832d78325c48ff41677595be797d90f42969beae0"
 dependencies = [
  "bytes",
  "futures-channel",
@@ -2394,9 +2394,9 @@ checksum = "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a"
 
 [[package]]
 name = "miniz_oxide"
-version = "0.8.0"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2d80299ef12ff69b16a84bb182e3b9df68b5a91574d3d4fa6e41b65deec4df1"
+checksum = "a2ef2593ffb6958c941575cee70c8e257438749971869c4ae5acf6f91a168a61"
 dependencies = [
  "adler2",
  "simd-adler32",
@@ -2836,9 +2836,9 @@ checksum = "e3148f5046208a5d56bcfc03053e3ca6334e51da8dfb19b6cdc8b306fae3283e"
 
 [[package]]
 name = "pharia-kernel"
-version = "0.4.7"
+version = "0.4.8"
 source = "sparse+https://alephalpha.jfrog.io/artifactory/api/cargo/pharia-kernel-crates/index/"
-checksum = "e0bab479254252bf6327d8c63e385b59033723c6f0e56b5a15f2180c69d4bad6"
+checksum = "758ff526b00805803fcc126939490c66b5d3d5c3ddd5ad5b4c2965c532d6b19c"
 dependencies = [
  "aleph-alpha-client",
  "anyhow",
@@ -3807,9 +3807,9 @@ dependencies = [
 
 [[package]]
 name = "sync_wrapper"
-version = "1.0.1"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7065abeca94b6a8a577f9bd45aa0867a2238b74e8eb67cf10d492bc39351394"
+checksum = "0bf256ce5efdfa370213c1dabab5935a12e49f2c58d15e9eac2870d3b4f27263"
 dependencies = [
  "futures-core",
 ]
