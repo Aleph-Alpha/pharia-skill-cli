@@ -1,7 +1,7 @@
-use std::{env, fs::File, io::Write, net::TcpListener, path::Path, time::Duration};
+use std::{env, fs::File, io::Write, net::TcpListener, path::Path};
 
 use assert_cmd::Command;
-use pharia_kernel::{AppConfig, Kernel, OperatorConfig};
+use pharia_kernel::{AppConfig, Kernel, NamespaceConfigs};
 use predicates::str::contains;
 use tokio::sync::oneshot;
 
@@ -100,7 +100,7 @@ impl TestKernel {
         let shutdown_signal = async {
             shutdown_capture.await.unwrap();
         };
-        let port = app_config.tcp_addr.port();
+        let port = app_config.kernel_address.port();
         let kernel = Kernel::new(app_config, shutdown_signal).await.unwrap();
         Self {
             kernel,
@@ -113,16 +113,10 @@ impl TestKernel {
         let port = free_test_port();
         let metrics_port = free_test_port();
         let app_config = AppConfig {
-            tcp_addr: format!("127.0.0.1:{port}").parse().unwrap(),
-            metrics_addr: format!("127.0.0.1:{metrics_port}").parse().unwrap(),
-            inference_addr: "https://inference-api.product.pharia.com".to_owned(),
-            document_index_addr: "https://document-index.product.pharia.com".to_owned(),
-            authorization_addr: "https://inference-api.product.pharia.com".to_owned(),
-            operator_config: OperatorConfig::dev(),
-            namespace_update_interval: Duration::from_secs(10),
-            log_level: "info".to_owned(),
-            open_telemetry_endpoint: None,
-            use_pooling_allocator: false,
+            kernel_address: format!("127.0.0.1:{port}").parse().unwrap(),
+            metrics_address: format!("127.0.0.1:{metrics_port}").parse().unwrap(),
+            namespaces: NamespaceConfigs::dev(),
+            ..Default::default()
         };
         Self::new(app_config).await
     }
