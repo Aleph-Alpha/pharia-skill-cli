@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.3.0...v0.3.1)
+
+### Builds
+
+- *(deps)* Bump the minor group across 1 directory with 13 updates - ([e6cd71c](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/e6cd71c3215e901203bc64b5c92cadec8821c37a))
+- *(deps)* Bump the minor group with 4 updates - ([5568fb3](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/5568fb3f7f36b644298254c02f5cc605a95e2f82))
+- *(deps)* Bump the minor group with 8 updates - ([a9db221](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/a9db22177cd1f453863a09134d8f9ff2ee4ed99b))
+- *(deps)* Bump the minor group with 39 updates - ([85a319f](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/85a319fb960adab2e7f919039b2f74a63c9e802e))
+- *(deps)* Bump the minor group with 2 updates - ([1f78ff2](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/1f78ff2949ac040cb1bed58e9a8f3849530e7b32))
+- *(deps)* Bump spdx from 0.10.7 to 0.10.8 in the minor group - ([594ada5](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/594ada5964dfcaa787176af2a38d8981dbf44e82))
+- *(deps)* Bump the minor group with 5 updates - ([27ad8ba](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/27ad8baf095eaf3c232a2b8e793228cb6d7a2469))
+- *(deps)* Bump quote from 1.0.37 to 1.0.38 in the minor group - ([67768a5](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/67768a5cf5411a7d6363c146b214b2517f55bd7a))
+- *(deps)* Bump unicase from 2.8.0 to 2.8.1 in the minor group - ([3a1133f](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/3a1133fc6196c615011aa16fd7279d83e12fa4bb))
+- *(deps)* Bump the minor group with 7 updates - ([7e4c08d](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/7e4c08d9805bb007ca7aff95c1df282f5eef5a59))
+- *(deps)* Bump the minor group with 3 updates - ([43e1e5f](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/43e1e5f8632a501bd9c1873612f0eaf04c99f7ad))
+- *(deps)* Bump pharia-kernel from 0.4.3 to 0.4.5 in the minor group - ([07b5607](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/07b5607f2391030b78b31858999bf73adff81120))
+
+
 ## [0.3.0](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.2.0...v0.3.0)
 
 ### Features
