@@ -12,6 +12,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
+
 jobs:
   tests:
     runs-on: ubuntu-latest
@@ -35,7 +38,6 @@ jobs:
       SKILL_REGISTRY_USER: ${{ github.actor }}
       SKILL_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PHARIA_AI_TOKEN: ${{ secrets.PHARIA_AI_TOKEN }}
-      ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
 
   lints:
     runs-on: ubuntu-latest
