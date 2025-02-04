@@ -8,27 +8,17 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-  id-token: write
-  packages: write
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  CARGO_TERM_COLOR: always
-  SKILL_REGISTRY: ghcr.io
-  SKILL_REPOSITORY: aleph-alpha/pharia-skill-cli/skills
-  SKILL_REGISTRY_USER: ${{ github.actor }}
-  SKILL_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  PHARIA_AI_TOKEN: ${{ secrets.PHARIA_AI_TOKEN }}
-  ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
-
 jobs:
   tests:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
@@ -38,6 +28,14 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: Run cargo test
         run: cargo test --all-features
+    env:
+      CARGO_TERM_COLOR: always
+      SKILL_REGISTRY: ghcr.io
+      SKILL_REPOSITORY: aleph-alpha/pharia-skill-cli/skills
+      SKILL_REGISTRY_USER: ${{ github.actor }}
+      SKILL_REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PHARIA_AI_TOKEN: ${{ secrets.PHARIA_AI_TOKEN }}
+      ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
 
   lints:
     runs-on: ubuntu-latest
