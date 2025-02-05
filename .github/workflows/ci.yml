@@ -12,6 +12,11 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  contents: read
+  id-token: write
+  packages: write
+
 env:
   CARGO_TERM_COLOR: always
   ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
@@ -24,10 +29,6 @@ env:
 jobs:
   tests:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
-      packages: write
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
