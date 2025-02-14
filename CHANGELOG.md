@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.2](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.3.1...v0.3.2)
+
+### Fixes
+
+- Update execute skill endpoint - ([9ff0641](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/9ff06411099ba648ebc156fb7af70be1c917215b))
+
+### Builds
+
+- *(deps)* Bump the minor group across 1 directory with 12 updates - ([44b8f82](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/44b8f829be4b1b46edfcdddb28f660570dba7672))
+- *(deps)* Bump the minor group with 3 updates - ([dc73999](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/dc7399972714c38fb83758b3dfc31bcb919fc9df))
+- *(deps)* Bump the minor group with 7 updates - ([17c5482](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/17c548282fed0d3dd9cc95e537fe1a65bf85e4c9))
+- *(deps)* Bump the minor group with 9 updates - ([cced2ae](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/cced2aef4c19e2776722b8ce75b4a5b93c923a2d))
+- *(deps)* Bump the minor group with 2 updates - ([1fa94d5](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/1fa94d54904d9db098adba69205916a0bb25f8ef))
+- *(deps)* Bump the minor group with 37 updates - ([0850338](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/08503385ff94cee1aa4562a54da62514f98a8898))
+- *(deps)* Bump the minor group with 10 updates - ([9c9fe49](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/9c9fe49236c67b880fe8a235b8973151212f7850))
+- *(deps)* Bump the minor group with 11 updates - ([03625f9](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/03625f976ccde2a844bed694a6ed4d1c01479460))
+- *(deps)* Bump the minor group with 4 updates - ([e61a4d1](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/e61a4d1276a98b3e4a6f7fca4b568e2e1f67d685))
+- *(deps)* Bump the minor group with 5 updates - ([f2cb9b3](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/f2cb9b3050548c9306debf1aad641711afd380f2))
+- *(deps)* Bump openssl-probe from 0.1.5 to 0.1.6 in the minor group - ([d8e0ffe](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/d8e0ffe4d36ca270554860f161f8343a9c111f2a))
+- *(deps)* Bump unicode-ident from 1.0.14 to 1.0.15 in the minor group - ([e592fc6](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/e592fc67db2a0a4b3160d458ee27e56b1a982d5b))
+- *(deps)* Bump the minor group with 32 updates - ([d4f1295](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/d4f1295174f1618ce7ddd2ea5e3fbdb1eaf51fd5))
+
+
 ## [0.3.1](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.3.0...v0.3.1)
 
 ### Builds
