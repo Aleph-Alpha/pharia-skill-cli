@@ -5,7 +5,6 @@ use mime::APPLICATION_JSON;
 use oci_client::{client::ClientConfig, secrets::RegistryAuth, Client, Reference};
 use oci_wasm::{WasmClient, WasmConfig};
 use reqwest::header::{HeaderValue, AUTHORIZATION, CONTENT_TYPE};
-use serde_json::json;
 
 #[derive(Parser)]
 #[clap(version)]
@@ -54,7 +53,7 @@ enum Command {
         #[arg(
             long,
             short = 'l',
-            default_value = "https://pharia-kernel.aleph-alpha-playground.stackit.rocks"
+            default_value = "https://pharia-kernel.product.pharia.com"
         )]
         url: String,
     },
@@ -118,20 +117,15 @@ async fn publish(
 }
 
 async fn run(name: String, input: String, token: String, url: String) {
-    let json_payload = json!({
-        "skill": name,
-        "input": input
-    });
-
     let mut auth_value = HeaderValue::from_str(&format!("Bearer {token}")).unwrap();
     auth_value.set_sensitive(true);
 
     let client = reqwest::Client::new();
     let resp = client
-        .post(format!("{url}/execute_skill"))
+        .post(format!("{url}/v1/skills/{name}/run"))
         .header(CONTENT_TYPE, APPLICATION_JSON.as_ref())
         .header(AUTHORIZATION, auth_value)
-        .json(&json_payload)
+        .json(&input)
         .send()
         .await
         .unwrap();
