@@ -120,7 +120,7 @@ async fn run(name: String, input: String, token: String, url: String) {
     let mut auth_value = HeaderValue::from_str(&format!("Bearer {token}")).unwrap();
     auth_value.set_sensitive(true);
 
-    let client = reqwest::Client::new();
+    let client = reqwest::Client::builder().use_rustls_tls().build().unwrap();
     let resp = client
         .post(format!("{url}/v1/skills/{name}/run"))
         .header(CONTENT_TYPE, APPLICATION_JSON.as_ref())
