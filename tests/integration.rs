@@ -100,7 +100,7 @@ impl TestKernel {
         let shutdown_signal = async {
             shutdown_capture.await.unwrap();
         };
-        let port = app_config.kernel_address.port();
+        let port = app_config.kernel_address().port();
         let kernel = Kernel::new(app_config, shutdown_signal).await.unwrap();
         Self {
             kernel,
@@ -112,12 +112,10 @@ impl TestKernel {
     async fn with_defaults() -> Self {
         let port = free_test_port();
         let metrics_port = free_test_port();
-        let app_config = AppConfig {
-            kernel_address: format!("127.0.0.1:{port}").parse().unwrap(),
-            metrics_address: format!("127.0.0.1:{metrics_port}").parse().unwrap(),
-            namespaces: NamespaceConfigs::dev(),
-            ..Default::default()
-        };
+        let app_config = AppConfig::default()
+            .with_kernel_address(format!("127.0.0.1:{port}").parse().unwrap())
+            .with_metrics_address(format!("127.0.0.1:{metrics_port}").parse().unwrap())
+            .with_namespaces(NamespaceConfigs::dev());
         Self::new(app_config).await
     }
 
