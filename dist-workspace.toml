@@ -24,3 +24,5 @@ install-updater = false
 cargo-auditable = true
 # Skip checking whether the specified configuration files are up to date
 allow-dirty = ["ci"]
+# Whether dist should create a Github Release or use an existing draft
+create-release = false
