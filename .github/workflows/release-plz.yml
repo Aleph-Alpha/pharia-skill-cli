@@ -25,13 +25,15 @@ jobs:
           token: ${{ secrets.RELEASE_PLZ_TOKEN }}
 
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@c5a29ddb4d9d194e7c84ec8c3fba61b1c31fee8c
+        with:
+          toolchain: stable
 
       - name: Get JFrog Artifactory login credentials
         uses: ./.github/actions/jfrog
 
       - name: Run release-plz
-        uses: release-plz/action@v0.5
+        uses: release-plz/action@4cd77ee4d22f0cdb1a461e6eb3591cddc5e1f665
         with:
           command: release
           registry: jfrog
@@ -53,14 +55,16 @@ jobs:
           token: ${{ secrets.RELEASE_PLZ_TOKEN }}
 
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+        uses: dtolnay/rust-toolchain@c5a29ddb4d9d194e7c84ec8c3fba61b1c31fee8c
+        with:
+          toolchain: stable
 
       - name: Get JFrog Artifactory login credentials
         uses: ./.github/actions/jfrog
 
       - name: Run release-plz
         id: release-plz
-        uses: release-plz/action@v0.5
+        uses: release-plz/action@4cd77ee4d22f0cdb1a461e6eb3591cddc5e1f665
         with:
           command: release-pr
           registry: jfrog
