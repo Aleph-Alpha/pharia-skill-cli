@@ -19,7 +19,6 @@ permissions:
 
 env:
   CARGO_TERM_COLOR: always
-  ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
   SKILL_REGISTRY: ghcr.io
   SKILL_REPOSITORY: aleph-alpha/pharia-skill-cli/skills
   SKILL_REGISTRY_USER: ${{ github.actor }}
@@ -32,9 +31,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
-      - uses: ./.github/actions/jfrog
-      - name: Set JFrog token as env variable for cargo
-        run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $GITHUB_ENV
       - uses: Swatinem/rust-cache@v2
       - name: Run cargo test
         run: cargo test --all-features
@@ -46,9 +42,6 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
-      - uses: ./.github/actions/jfrog
-      - name: Set JFrog token as env variable for cargo
-        run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $GITHUB_ENV
       - uses: Swatinem/rust-cache@v2
       - run: cargo fmt -- --check
       - run: cargo clippy --all-features --all-targets

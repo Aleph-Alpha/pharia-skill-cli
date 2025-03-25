@@ -16,8 +16,6 @@
 name: Release
 permissions:
   "contents": "write"
-env:
-  ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
 
 # This task will run whenever you push a git tag that looks like a version
 # like "1.0.0", "v0.1.0-prerelease.1", "my-app/0.1.0", "releases/v1.0.0", etc.
@@ -44,15 +42,12 @@ on:
   pull_request:
   push:
     tags:
-      - "**[0-9]+.[0-9]+.[0-9]+*"
+      - '**[0-9]+.[0-9]+.[0-9]+*'
 
 jobs:
   # Run 'dist plan' (or host) to determine what tasks we need to do
   plan:
     runs-on: "ubuntu-20.04"
-    permissions:
-      id-token: "write"
-      contents: "write"
     outputs:
       val: ${{ steps.plan.outputs.manifest }}
       tag: ${{ !github.event.pull_request && github.ref_name || '' }}
@@ -60,7 +55,6 @@ jobs:
       publishing: ${{ !github.event.pull_request }}
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      ARTIFACTORY_URL: "https://alephalpha.jfrog.io"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -75,10 +69,6 @@ jobs:
         with:
           name: cargo-dist-cache
           path: ~/.cargo/bin/dist
-      - name: Get JFrog Artifactory login credentials
-        uses: ./.github/actions/jfrog
-      - name: Set JFrog token as env variable for cargo
-        run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $GITHUB_ENV
       # sure would be cool if github gave us proper conditionals...
       # so here's a doubly-nested ternary-via-truthiness to try to provide the best possible
       # functionality based on whether this is a pull_request, and whether it's from a fork.
@@ -117,9 +107,6 @@ jobs:
       # - N "local" tasks that build each platform's binaries and platform-specific installers
       matrix: ${{ fromJson(needs.plan.outputs.val).ci.github.artifacts_matrix }}
     runs-on: ${{ matrix.runner }}
-    permissions:
-      id-token: "write"
-      contents: "write"
     container: ${{ matrix.container && matrix.container.image || null }}
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -152,11 +139,6 @@ jobs:
       - name: Install dependencies
         run: |
           ${{ matrix.packages_install }}
-      - name: Get JFrog Artifactory login credentials
-        uses: ./.github/actions/jfrog
-      - name: Set JFrog token as env variable for cargo
-        run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $GITHUB_ENV
-        shell: bash
       - name: Build artifacts
         run: |
           # Actually do builds and make zips and whatnot
@@ -189,9 +171,6 @@ jobs:
       - plan
       - build-local-artifacts
     runs-on: "ubuntu-20.04"
-    permissions:
-      id-token: "write"
-      contents: "write"
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       BUILD_MANIFEST_NAME: target/distrib/global-dist-manifest.json
@@ -212,10 +191,6 @@ jobs:
           pattern: artifacts-*
           path: target/distrib/
           merge-multiple: true
-      - name: Get JFrog Artifactory login credentials
-        uses: ./.github/actions/jfrog
-      - name: Set JFrog token as env variable for cargo
-        run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $GITHUB_ENV
       - id: cargo-dist
         shell: bash
         run: |
@@ -246,9 +221,6 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: "ubuntu-20.04"
-    permissions:
-      id-token: "write"
-      contents: "write"
     outputs:
       val: ${{ steps.host.outputs.manifest }}
     steps:
@@ -268,10 +240,6 @@ jobs:
           pattern: artifacts-*
           path: target/distrib/
           merge-multiple: true
-      - name: Get JFrog Artifactory login credentials
-        uses: ./.github/actions/jfrog
-      - name: Set JFrog token as env variable for cargo
-        run: echo "CARGO_REGISTRIES_JFROG_TOKEN=Bearer $JFROG_ACCESS_TOKEN" >> $GITHUB_ENV
       - id: host
         shell: bash
         run: |
