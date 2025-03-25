@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.1](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.0...v0.4.1)
+
+### Documentation
+
+- Add usage docs - ([63a444c](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/63a444c4d176a7df37c85e0440edf3d71a30edb9))
+
+
 ## [0.4.0](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.3.6...v0.4.0)
 
 ### Features
