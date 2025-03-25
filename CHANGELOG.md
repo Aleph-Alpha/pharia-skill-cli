@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Features
 
-- Add license - ([16eb589](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/16eb58970fe5279586d8e2ccc83cfbeac5d6a0b2))
+- License with Apache-2.0 - ([16eb589](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/16eb58970fe5279586d8e2ccc83cfbeac5d6a0b2))
 
 ## [0.4.1](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.0...v0.4.1)
 
