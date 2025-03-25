@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.4](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.3...v0.4.4)
+
+### Fixes
+
+- Don't use duplicate ssl libraries - ([9e29db0](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/9e29db0fddd73b28e4932678d918fe052c6969ca))
+
+### Builds
+
+- *(deps)* Bump the minor group with 2 updates - ([c46ba33](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/c46ba33f76764536da4e9828e41d120ac31ed294))
+- *(deps)* Bump dtolnay/rust-toolchain - ([8f0e9d1](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/8f0e9d1c34bd21754ef51604ca7769582141072a))
+
+
 ## [0.4.3](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.2...v0.4.3)
 
 ### Fixes
