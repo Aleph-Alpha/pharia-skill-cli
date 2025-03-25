@@ -1,10 +1,8 @@
 use std::path::PathBuf;
 
 use clap::Parser;
-use mime::APPLICATION_JSON;
 use oci_client::{client::ClientConfig, secrets::RegistryAuth, Client, Reference};
 use oci_wasm::{WasmClient, WasmConfig};
-use reqwest::header::{HeaderValue, AUTHORIZATION, CONTENT_TYPE};
 
 #[derive(Parser)]
 #[clap(version)]
@@ -38,25 +36,6 @@ enum Command {
         #[arg(long, short = 'p', env = "SKILL_REGISTRY_TOKEN")]
         token: String,
     },
-    /// Run a skill via Pharia Kernel
-    Run {
-        /// The Skill name
-        #[arg(long, short = 'n')]
-        name: String,
-        /// The Skill input
-        #[arg(long, short = 'i')]
-        input: String,
-        /// The API token
-        #[arg(long, short = 'a', env = "PHARIA_AI_TOKEN")]
-        token: String,
-        /// The Pharia Kernel instance
-        #[arg(
-            long,
-            short = 'l',
-            default_value = "https://pharia-kernel.product.pharia.com"
-        )]
-        url: String,
-    },
 }
 
 #[tokio::main]
@@ -73,12 +52,6 @@ async fn main() {
             username,
             token,
         } => publish(skill, registry, repository, name, tag, username, token).await,
-        Command::Run {
-            name,
-            input,
-            token,
-            url,
-        } => run(name, input, token, url).await,
     }
 }
 
@@ -114,21 +87,4 @@ async fn publish(
         .push(&image, &auth, component_layer, config, None)
         .await
         .expect("Could not publish skill, please check command arguments.");
-}
-
-async fn run(name: String, input: String, token: String, url: String) {
-    let mut auth_value = HeaderValue::from_str(&format!("Bearer {token}")).unwrap();
-    auth_value.set_sensitive(true);
-
-    let client = reqwest::Client::builder().use_rustls_tls().build().unwrap();
-    let resp = client
-        .post(format!("{url}/v1/skills/{name}/run"))
-        .header(CONTENT_TYPE, APPLICATION_JSON.as_ref())
-        .header(AUTHORIZATION, auth_value)
-        .json(&input)
-        .send()
-        .await
-        .unwrap();
-
-    println!("{}", resp.text().await.unwrap());
 }

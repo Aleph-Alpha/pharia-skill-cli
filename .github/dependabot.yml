@@ -4,17 +4,9 @@
 # https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
-registries:
-  cargo-jfrog:
-    type: cargo-registry
-    registry: "jfrog"
-    url: https://alephalpha.jfrog.io/artifactory/
-    token: "${{secrets.CARGO_REGISTRIES_JFROG_TOKEN}}"
 updates:
   - package-ecosystem: "cargo"
     directory: "/"
-    registries:
-      - cargo-jfrog
     schedule:
       interval: "daily"
     allow:
