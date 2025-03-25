@@ -1,10 +1,12 @@
 [package]
 name = "pharia-skill-cli"
 version = "0.4.2"
-edition = "2021"
+edition = "2024"
 repository = "https://github.com/Aleph-Alpha/pharia-skill-cli"
 description = "A simple CLI that helps you publish skills on Pharia Kernel."
 license = "Apache-2.0"
+keywords = ["cli", "pharia", "skill"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 clap = { version = "4.5.32", features = ["env", "derive"] }
@@ -20,6 +22,21 @@ tokio = { version = "1.44.1", features = [
 assert_cmd = "2.0.16"
 dotenvy = "0.15.7"
 wat = "1.227.1"
+
+[lints.rust]
+future-incompatible = "warn"
+keyword-idents = "warn"
+let-underscore = "warn"
+nonstandard-style = "warn"
+refining-impl-trait = "warn"
+rust-2018-idioms = "warn"
+rust-2024-compatibility = "warn"
+unused = { level = "warn", priority = -1 }
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+module-name-repetitions = "allow"
+needless-pass-by-value = "allow"
 
 # The profile that 'dist' will build with
 [profile.dist]
