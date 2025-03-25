@@ -1,7 +1,7 @@
 use std::path::PathBuf;
 
 use clap::Parser;
-use oci_client::{client::ClientConfig, secrets::RegistryAuth, Client, Reference};
+use oci_client::{Client, Reference, client::ClientConfig, secrets::RegistryAuth};
 use oci_wasm::{WasmClient, WasmConfig};
 
 #[derive(Parser)]
