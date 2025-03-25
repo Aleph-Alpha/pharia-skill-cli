@@ -17,10 +17,10 @@ enum Command {
     Publish {
         /// Path to skill .wasm file
         skill: PathBuf,
-        /// The OCI registry the skill will be published to (e.g. 'registry.gitlab.aleph-alpha.de')
+        /// The OCI registry the skill will be published to (e.g. 'ghcr.io')
         #[arg(long, short = 'R', env = "SKILL_REGISTRY")]
         registry: String,
-        /// The OCI repository the skill will be published to (e.g. 'engineering/pharia-skills/skills')
+        /// The OCI repository the skill will be published to (e.g. 'org/pharia-skills/skills')
         #[arg(long, short = 'r', env = "SKILL_REPOSITORY")]
         repository: String,
         /// Published skill name
