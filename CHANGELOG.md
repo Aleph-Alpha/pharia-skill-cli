@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.3.6...v0.4.0)
+
+### Features
+
+- [**breaking**] Remove run command, JFrog registry and simplify dependencies - ([eb805e6](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/eb805e639ea9725a1120210d2087fd9f54141f47))
+
+### Documentation
+
+- Update readme - ([b508c6c](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/b508c6c7e3bddf30db3257b1d3f09ad4fc4d350f))
+
+
 ## [0.3.3](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.3.2...v0.3.3)
 
 ### Builds
