@@ -2,6 +2,7 @@
 release_always = false
 git_release_draft = true
 release_commits = "^(feat|fix|docs|perf|test|build|ci|revert)"
+changelog_update = false
 semver_check = false
 
 [changelog]
