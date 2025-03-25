@@ -1,8 +1,9 @@
 [package]
 name = "pharia-skill-cli"
-version = "0.4.1"
+version = "0.4.2"
 edition = "2021"
 repository = "https://github.com/Aleph-Alpha/pharia-skill-cli"
+description = "A simple CLI that helps you publish skills on Pharia Kernel."
 license = "Apache-2.0"
 
 [dependencies]
