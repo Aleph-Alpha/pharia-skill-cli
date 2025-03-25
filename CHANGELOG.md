@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.3](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.2...v0.4.3)
+
+### Fixes
+
+- Fix clippy lints - ([67b1df3](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/67b1df3bad626f84af86d450e9fb17fe9c634fdd))
+
+
 ## [0.4.2](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.1...v0.4.2)
 
 ### Features
