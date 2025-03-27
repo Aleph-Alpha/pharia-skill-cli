@@ -9,7 +9,7 @@ keywords = ["cli", "pharia", "skill"]
 categories = ["command-line-utilities"]
 
 [dependencies]
-clap = { version = "4.5.32", features = ["env", "derive"] }
+clap = { version = "4.5.34", features = ["env", "derive"] }
 oci-client = { version = "0.14.0", default-features = false, features = [
     "rustls-tls",
 ] }
