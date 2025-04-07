@@ -16,7 +16,7 @@ oci-client = { version = "0.14.0", default-features = false, features = [
 oci-wasm = { version = "0.2.1", default-features = false, features = [
     "rustls-tls",
 ] }
-tokio = { version = "1.44.1", features = [
+tokio = { version = "1.44.2", features = [
     "macros",
     "rt-multi-thread",
     "signal",
