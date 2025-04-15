@@ -19,3 +19,7 @@ install-updater = false
 cargo-auditable = true
 # Whether dist should create a Github Release or use an existing draft
 create-release = false
+
+[dist.github-custom-runners]
+global = "ubuntu-22.04"
+x86_64-unknown-linux-gnu = "ubuntu-22.04"
