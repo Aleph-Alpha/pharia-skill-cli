@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.6](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.5...v0.4.6)
+
+### Builds
+
+- *(deps)* Bump libc from 0.2.171 to 0.2.172 in the minor group - ([87dcc98](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/87dcc98850ea088e8c6644322c2a28fcc24e50bb))
+- *(deps)* Bump release-plz/action from 0.5.103 to 0.5.104 - ([71abeda](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/71abeda3da09deadae97010b4dae444ebe45f6f8))
+- *(deps)* Bump the minor group with 3 updates - ([1852f6d](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/1852f6d425e86f454c3367b195e1c31fc6673e6a))
+- *(deps)* Bump cc from 1.2.18 to 1.2.19 in the minor group - ([f1c499e](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/f1c499ea0ce59c73ba32054d9a939db1d3faab6e))
+- *(deps)* Bump release-plz/action from 0.5.102 to 0.5.103 - ([7137853](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/7137853cbfc1acb9495e0cd64775c1fd831545de))
+- *(deps)* Bump rustls from 0.23.25 to 0.23.26 in the minor group - ([2d207bf](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/2d207bf5949acf98b50f261ee9d6bcb3de7984ca))
+- *(deps)* Bump the minor group with 2 updates - ([f21b3b2](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/f21b3b263957f976fca62958009709efe30be9fe))
+- *(deps)* Bump release-plz/action from 0.5.101 to 0.5.102 - ([50858a5](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/50858a50cff073a53146a67133652bffed387436))
+
+
 ## [0.4.5](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.4...v0.4.5)
 
 ### Builds
