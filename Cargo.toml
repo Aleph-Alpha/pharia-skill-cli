@@ -16,7 +16,7 @@ oci-client = { version = "0.14.0", default-features = false, features = [
 oci-wasm = { version = "0.2.1", default-features = false, features = [
     "rustls-tls",
 ] }
-tokio = { version = "1.44.2", features = [
+tokio = { version = "1.45.0", features = [
     "macros",
     "rt-multi-thread",
     "signal",
@@ -25,7 +25,7 @@ tokio = { version = "1.44.2", features = [
 [dev-dependencies]
 assert_cmd = "2.0.17"
 dotenvy = "0.15.7"
-wat = "1.229.0"
+wat = "1.230.0"
 
 [lints.rust]
 future-incompatible = "warn"
