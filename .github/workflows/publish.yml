@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build wheels
-        uses: PyO3/maturin-action@v1
+        uses: PyO3/maturin-action@aef21716ff3dcae8a1c301d23ec3e4446972a6e3
         with:
           target: ${{ matrix.platform.target }}
           args: --release --out dist
@@ -66,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build wheels
-        uses: PyO3/maturin-action@v1
+        uses: PyO3/maturin-action@aef21716ff3dcae8a1c301d23ec3e4446972a6e3
         with:
           target: ${{ matrix.platform.target }}
           args: --release --out dist
@@ -90,7 +90,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build wheels
-        uses: PyO3/maturin-action@v1
+        uses: PyO3/maturin-action@aef21716ff3dcae8a1c301d23ec3e4446972a6e3
         with:
           target: ${{ matrix.platform.target }}
           args: --release --out dist
@@ -113,7 +113,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build wheels
-        uses: PyO3/maturin-action@v1
+        uses: PyO3/maturin-action@aef21716ff3dcae8a1c301d23ec3e4446972a6e3
         with:
           target: ${{ matrix.platform.target }}
           args: --release --out dist
@@ -129,7 +129,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build sdist
-        uses: PyO3/maturin-action@v1
+        uses: PyO3/maturin-action@aef21716ff3dcae8a1c301d23ec3e4446972a6e3
         with:
           command: sdist
           args: --out dist
@@ -159,7 +159,7 @@ jobs:
           subject-path: 'wheels-*/*'
       - name: Publish to PyPI
         if: "startsWith(github.ref, 'refs/tags/')"
-        uses: PyO3/maturin-action@v1
+        uses: PyO3/maturin-action@aef21716ff3dcae8a1c301d23ec3e4446972a6e3
         with:
           command: upload
           args: --non-interactive --skip-existing wheels-*/*
