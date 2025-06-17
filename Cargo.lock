@@ -1088,7 +1088,7 @@ checksum = "e3148f5046208a5d56bcfc03053e3ca6334e51da8dfb19b6cdc8b306fae3283e"
 
 [[package]]
 name = "pharia-skill-cli"
-version = "0.4.8"
+version = "0.4.9"
 dependencies = [
  "assert_cmd",
  "clap",
