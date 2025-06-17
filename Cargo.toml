@@ -11,7 +11,7 @@ categories = ["command-line-utilities"]
 [dependencies]
 clap = { version = "4.5.40", features = ["env", "derive"] }
 oci-client = { version = "0.15.0", default-features = false, features = [
-    "rustls-tls",
+    "rustls-tls-native-roots",
 ] }
 oci-wasm = { version = "0.3.0", default-features = false, features = [
     "rustls-tls",
