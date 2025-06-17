@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.7](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.6...v0.4.7)
+
+### Features
+
+- Use root certificates from the rustls-native-certs crate - ([4d924d0](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/4d924d0beeecebcd824ae336b12595501b47cb02))
+
+### Builds
+
+- *(deps)* Bump the minor group across 1 directory with 73 updates - ([331897b](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/331897baa646f435272efeed564d8c25f1e21d8f))
+- *(deps)* Bump release-plz/action from 0.5.105 to 0.5.107 - ([a73a3e9](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/a73a3e9ab3a285586833f7aadd27c3c3af380908))
+- *(deps)* Bump dtolnay/rust-toolchain - ([c1b8721](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/c1b87218e3e263ea5254d3510a0730d164da4692))
+- *(deps)* Bump cc from 1.2.19 to 1.2.20 in the minor group - ([099e72f](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/099e72f1a3152759db8dae2042ba794e393cbeb4))
+- *(deps)* Bump the minor group with 2 updates - ([16af5d1](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/16af5d1029507a4af2ecc630502898fa677549b0))
+- *(deps)* Bump quinn-proto from 0.11.10 to 0.11.11 in the minor group - ([63bb1ba](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/63bb1ba5cce5c0e64ca87004e0a5a9c9f0dee301))
+- *(deps)* Bump release-plz/action from 0.5.104 to 0.5.105 - ([0447302](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/0447302fa90dce338b3698dfd0f5292f39f6c38b))
+- *(deps)* Bump the minor group with 3 updates - ([66d94e6](https://github.com/Aleph-Alpha/pharia-skill-cli/commit/66d94e60dc8b86dda200b7d05bdfd5834a782def))
+
+
 ## [0.4.6](https://github.com/Aleph-Alpha/pharia-skill-cli/compare/v0.4.5...v0.4.6)
 
 ### Builds
