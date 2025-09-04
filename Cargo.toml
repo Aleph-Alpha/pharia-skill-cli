@@ -9,14 +9,14 @@ keywords = ["cli", "pharia", "skill"]
 categories = ["command-line-utilities"]
 
 [dependencies]
-clap = { version = "4.5.40", features = ["env", "derive"] }
+clap = { version = "4.5.47", features = ["env", "derive"] }
 oci-client = { version = "0.15.0", default-features = false, features = [
     "rustls-tls-native-roots",
 ] }
 oci-wasm = { version = "0.3.0", default-features = false, features = [
     "rustls-tls",
 ] }
-tokio = { version = "1.45.1", features = [
+tokio = { version = "1.47.1", features = [
     "macros",
     "rt-multi-thread",
     "signal",
@@ -25,7 +25,7 @@ tokio = { version = "1.45.1", features = [
 [dev-dependencies]
 assert_cmd = "2.0.17"
 dotenvy = "0.15.7"
-wat = "1.235.0"
+wat = "1.238.1"
 
 [lints.rust]
 future-incompatible = "warn"
